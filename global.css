@@ -64,13 +64,20 @@ li a{
 }
 
 
+/* Alterações para a tela não estuca rno mobile */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 /* Container menu */
 main {
     background: linear-gradient(90deg, #76520e, #c5b790, #fffae5); 
-    background: linear-gradient(180deg, #76520e, #c5b790, #fffae5); 
     min-height: 60vh;
     padding: 3rem 6.25rem;
     margin-top: 8.3rem;
@@ -188,12 +195,24 @@ footer .container-inferior {
 
 
 @media (max-width: 600px) {
-    header {
-        display: flex;
-        flex-direction: column; /* empilha logo + hamburger + menu */
-        align-items: center; /* centraliza tudo horizontalmente */
+
+    h1 {
+        padding-right: 1rem;
     }
 
+    h3 {
+        padding-right: 1rem;
+    }
+
+    header {
+        display: flex;
+        padding-left: 0.5rem;
+        flex-direction: column; /* empilha logo + hamburger + menu */
+    }
+
+    main {
+        background: linear-gradient(180deg, #76520e, #c5b790, #fffae5) !important;
+    }
 
     .menu-icon {
         display: block; /* mostra o hamburger */
@@ -209,7 +228,6 @@ footer .container-inferior {
     /* Esconde a lista de links inicialmente */
     .nav-right {
         display: none;
-        flex-direction: column;
         gap: 1rem;
         margin-top: 0.5rem;
         text-align: center;
@@ -218,11 +236,14 @@ footer .container-inferior {
 
     .nav-right li {
         text-align: center; /* centraliza cada item do menu */
+        display: flex;
+        justify-content: center;
     }
 
     /* Mostra o menu quando checkbox é marcado */
     .menu-toggle:checked ~ .nav-right {
         display: flex;
+        padding-left: 1.5rem;
     }
 
     /* Quando o menu estiver aberto (checkbox marcado), seta aponta para baixo */
