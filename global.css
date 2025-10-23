@@ -22,6 +22,7 @@ header {
     width: 100%;
     z-index: 100;
     background-color: rgba(247, 244, 232, 0.7) !important;
+    
 }
 
 /* Logo da esquerda no Navbar */
@@ -69,7 +70,8 @@ li a{
 
 /* Container menu */
 main {
-    background: linear-gradient(90deg, #76520e, #c5b790, #ffff); 
+    background: linear-gradient(180deg, #76520e, #c5b790, #fffae5) !important;
+    background: linear-gradient(90deg, #76520e, #c5b790, #fffae5); 
     min-height: 60vh;
     padding: 3rem 6.25rem;
     margin-top: 8.3rem;
@@ -154,7 +156,7 @@ footer .container-inferior {
 
 @media (max-width: 1024px) {
   .container-principal {
-    background: linear-gradient(180deg, #76520e, #c5b790, #ffff);
+    
     flex-direction: column; /* empilha imagem e texto */
     align-items: center;
     text-align: center;
