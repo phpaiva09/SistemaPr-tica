@@ -16,7 +16,7 @@ header {
     display: flex;
     background-color: #fffae5;
     color: #76520e;
-
+    backdrop-filter: blur(10px); 
     top: 0;
     left: 0;
     width: 100%;
@@ -171,6 +171,11 @@ footer .container-inferior {
   }
 }
 
+    .menu-toggle {
+        display: none; /* esconde o checkbox */
+    }
+
+
 /* Hamburger sempre abaixo do logo e centralizado */
 .menu-icon {
     display: none; /* só aparece no mobile */
@@ -189,9 +194,6 @@ footer .container-inferior {
         align-items: center; /* centraliza tudo horizontalmente */
     }
 
-    .menu-toggle {
-        display: none; /* esconde o checkbox */
-    }
 
     .menu-icon {
         display: block; /* mostra o hamburger */
