@@ -22,6 +22,7 @@ header {
     width: 100%;
     z-index: 100;
     background-color: rgba(247, 244, 232, 0.7) !important;
+    backdrop-filter: blur(4px);
     
 }
 
@@ -151,11 +152,8 @@ footer .container-inferior {
 }
 
 
-
-
 @media (max-width: 1024px) {
   .container-principal {
-    
     flex-direction: column; /* empilha imagem e texto */
     align-items: center;
     text-align: center;
@@ -172,24 +170,73 @@ footer .container-inferior {
   }
 }
 
+.menu-toggle {
+  display: none;
+}
+
+.nav-right {
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle:checked + .menu-icon {
+  transform: rotate(90deg);
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* 🔹 Só aparece em telas até 600px */
 @media (max-width: 600px) {
-  header {
+
+  .menu-icon {
+    display: block;
+    font-size: 2rem; /* tamanho do ícone */
+    color: #76520e;
+    cursor: pointer;
+    position: fixed;
+    top: 2rem;
+    right: 1.5rem;
+    z-index: 300;
+    transition: transform 0.3s ease;
+  }
+
+  /* Menu lateral escondido inicialmente */
+  .nav-right {
+    position: fixed;
+    top: 2rem;
+    right: 0;
+    width: 20%;
+    height: 60vh;
+    background-color: rgba(247, 244, 232, 1);
+    display: flex;
     flex-direction: column;
-    height: auto;
-    padding: 1rem 0;
+    padding-right: 2rem;
+    align-items: center;
     text-align: center;
+    gap: 1.5rem;
+    border-radius: 20px;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    z-index: 250;
   }
 
-  ul {
-    flex-direction: column;
-    gap: 1rem;
+  /* Quando o menu é ativado */
+  .menu-toggle:checked ~ .nav-right {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .container-left p {
-    font-size: 1rem;
+  /* Ícone dentro do menu aberto */
+  .menu-toggle:checked + .menu-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: #76520e;
+    z-index: 400;
   }
 }
