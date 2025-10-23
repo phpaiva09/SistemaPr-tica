@@ -154,6 +154,7 @@ footer .container-inferior {
 
 @media (max-width: 1024px) {
   .container-principal {
+    background: linear-gradient(180deg, #76520e, #c5b790, #ffff);
     flex-direction: column; /* empilha imagem e texto */
     align-items: center;
     text-align: center;
