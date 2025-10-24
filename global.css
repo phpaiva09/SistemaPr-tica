@@ -34,32 +34,39 @@ header {
     align-items: center;
     margin: 0;
     padding: 0;
-    width: 29%;
+    text-decoration: none; 
+    width: 20%;
 }
 
 /* Palavra do logo prática */
 h1 {
-    color: black;
+    color: #76520e;
     font-size: 2.25rem;
-    margin-bottom: -1rem;
+    margin-bottom: -1.7rem;
+    font-weight: 500;
 }
 
+.logo h3 {
+    color: black;
+    font-weight: 500;
+}
 
 li a {
     text-decoration: none; /* Tira o sublihado */
     display: flex;
     justify-content: space-between;
     color: #76520e;
+    
 }
 
 .nav-right {
     list-style-type: none; /* Tira os pontos */
     display: flex;
-    
     justify-content: space-evenly;
-    padding: 0; /* Remove o padding padrão */
-    margin: 0; /* Remove a margem padrão */
-    width: 45%; /* Garante que o UL ocupe 45% da largura do contêiner */
+    padding: 0; 
+    margin: 0; 
+    width: 40%; 
+    margin-top: 0.8rem;
 }
 
 a {
@@ -78,7 +85,7 @@ a {
 
 
 
-/* Container menu */
+/* Container Princ */
 main {
     width: 100vw;
     font-size: 2rem;
@@ -86,12 +93,14 @@ main {
 }
 
 .container-principal {
-     
+    width: 100%;
     margin-top: 7.6rem;
     padding-top: 2rem;
     padding-bottom: 4rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 6rem;
+    
 }
 
 /* Imagem do carrinho no menu principal */
@@ -103,13 +112,14 @@ main {
 
 /* Letras menu da esquerda */
 .container-left {
-    margin-top: 1rem;
-    margin-left: 2rem;
+    margin-top: 3rem;
 }
 
 .container-left p {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
+
+/* Final Container Principal */
 
 
 
@@ -136,13 +146,24 @@ section {
     gap: 3rem;
 }
 
+.logo-whatsapp-instagram {
+    display: inline-flex;
+    gap: 3rem;
+    padding-top: 2rem;
+}
+
+.img-whatsapp {
+    padding-top: 0.5rem;
+}
+
+}
+
+
 
 
 html {
   scroll-behavior: smooth; /* Ao clicar no compre já a rolagem é lenta */
 }
-
-
 
 
 
@@ -239,8 +260,15 @@ footer .container-inferior {
 
     .container-principal {
         width: 100%;
-         
-        
+    }
+
+    h2 {
+        font-size: 2rem;
+   
+    }
+
+    p {
+        font-size: 0.5rem;
     }
 
     /* Esconde a lista de links inicialmente */
@@ -248,6 +276,10 @@ footer .container-inferior {
         display: none;
         text-align: center;
         width: 100%; /* opcional, para o menu ocupar toda a largura */
+    }
+
+    section {
+        padding-top: 0;
     }
 
     /* Mostra o menu quando checkbox é marcado */
