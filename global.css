@@ -233,7 +233,9 @@ footer .container-inferior {
 
     body {
         overflow-x: hidden;
+        width: 100%;
     }
+
 
     header {
         position: static;  /* header não fica fixo */
@@ -275,6 +277,7 @@ footer .container-inferior {
 
     .container-principal {
         width: 100%;
+        align-items: center;
     }
 
     /* Bem vindo a pratica industria e comercio */
