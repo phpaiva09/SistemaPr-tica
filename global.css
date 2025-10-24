@@ -229,6 +229,10 @@ footer .container-inferior {
 
 @media (max-width: 600px) {
     header {
+        position: static;  /* header não fica fixo */
+        margin-bottom: -9.5rem; /* reduz o espaço vertical */
+        width: 100%;
+        width: 100%;
         display: flex;
         justify-content: space-evenly;
         flex-direction: column; /* empilha logo + hamburger + menu */
@@ -266,11 +270,13 @@ footer .container-inferior {
         width: 100%;
     }
 
+    /* Bem vindo a pratica industria e comercio */
     h2 {
         font-size: 2rem;
    
     }
 
+    /* Subtitulo embaixo */
     p {
         font-size: 0.5rem;
     }
@@ -280,7 +286,7 @@ footer .container-inferior {
     }
 
     #compre {
-        padding-top: 6rem;
+        padding-top: 2rem;
     }
 
     #compre h2 {
@@ -288,7 +294,7 @@ footer .container-inferior {
     }
 
     /* Esconde a lista de links inicialmente */
-    .nav-right {
+    ul.nav-right {
         display: none;
         text-align: center;
         width: 100%; /* opcional, para o menu ocupar toda a largura */
@@ -296,8 +302,11 @@ footer .container-inferior {
 
 
     /* Mostra o menu quando checkbox é marcado */
-    .menu-toggle:checked ~ .nav-right {
+    .menu-toggle:checked ~ ul.nav-right {
         display: flex;
+        padding: 0%;
+        margin: 0%;
+        padding-right: 1.7rem;
 
     }
 
