@@ -85,14 +85,7 @@ a {
 
 
 
-/* Container Princ */
 main {
-    width: 100vw;
-    font-size: 2rem;
-    background: linear-gradient(90deg, #76520e, #c5b790, #fffae5);
-}
-
-.container-principal {
     width: 100%;
     margin-top: 7.6rem;
     padding-top: 2rem;
@@ -100,7 +93,9 @@ main {
     display: flex;
     justify-content: center;
     gap: 6rem;
-    
+    width: 100vw;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #76520e, #c5b790, #fffae5);
 }
 
 /* Imagem do carrinho no menu principal */
@@ -190,11 +185,15 @@ footer .container-inferior {
 
 
 
-@media (max-width: 1000px) {
-  .container-principal {
+@media (max-width: 1025px) {
+  main {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    padding: 4rem 2rem;
+    height: auto; /* deixa o conteúdo se ajustar */
+    width: 100vw;
+    background: linear-gradient(90deg, #76520e, #c5b790, #fffae5);
   }
 
   .menu-right img {
@@ -202,18 +201,11 @@ footer .container-inferior {
     width: 80%;
   }
 
-  main {
-    padding: 4rem 2rem;
-    height: auto; /* deixa o conteúdo se ajustar */
-    width: 100vw;
-    background: linear-gradient(90deg, #76520e, #c5b790, #fffae5);
-  }
-
 }
 
-    .menu-toggle {
-        display: none; /* esconde o checkbox */
-    }
+.menu-toggle {
+    display: none; /* esconde o checkbox */
+}
 
 
 /* Hamburger sempre abaixo do logo e centralizado */
@@ -228,6 +220,12 @@ footer .container-inferior {
 
 
 @media (max-width: 600px) {
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden; /* remove rolagem lateral */
+    }
+
     header {
         position: static;  /* header não fica fixo */
         margin-bottom: -9.5rem; /* reduz o espaço vertical */
@@ -263,10 +261,6 @@ footer .container-inferior {
         transform: rotate(-135deg); /* seta para cima */
         transition: transform 0.3s ease;
         margin: 1rem auto 0; /* centraliza abaixo do logo */
-    }
-
-    .container-principal {
-        width: 100%;
     }
 
     /* Bem vindo a pratica industria e comercio */
