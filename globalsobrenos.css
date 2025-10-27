@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #fffae5;
+    margin: 0;
+    padding: 0;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+
+@media (max-width: 3000px) {
+
+    /* Cabeçalho */
+    header {
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+        left: 0;
+        width: 100%;
+        align-items: center;
+        position: fixed;
+        background-color:#fffae5;
+        color: #76520e;
+        backdrop-filter: blur(6px);
+        z-index: 100;
+        background-color: rgba(247, 244, 232, 0.7);
+    }
+
+    /* Logo da esquerda no Navbar */
+    .logo {
+        font-size: 1.1rem;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        text-decoration: none; 
+        width: 20%;
+    }
+
+    /* Palavra do logo prática */
+    .logo h1 {
+        color: #76520e;
+        font-size: 2.25rem;
+        margin-bottom: -1.7rem;
+        font-weight: 500;
+    }
+
+    .logo h3 {
+        color: black;
+        font-weight: 500;
+    }
+
+    li a {
+        text-decoration: none; /* Tira o sublihado */
+        display: flex;
+        justify-content: space-between;
+        color: #76520e;
+        
+    }
+
+    .nav-right {
+        list-style-type: none; /* Tira os pontos */
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0; 
+        margin: 0; 
+        width: 40%; 
+        margin-top: 0.8rem;
+    }
+
+    a {
+        display: flex;
+        justify-content: space-between;
+
+    }
+}
+/* Fim Cabeçalho */
+
+
+/* Início main */
+main {
+    background-color: rgb(173, 173, 173);
+    width: 80%;
+    flex-direction: column;
+    margin-top: 7.6rem;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 1rem;
+    line-height: 1.5rem;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    padding-top: 0.5rem;
+}
+
+main h3 {
+    font-size: 1.2rem;
+    padding-top: 1.6rem;
+}
+
+.menu-toggle {
+    display: none; /* esconde o checkbox */
+}
