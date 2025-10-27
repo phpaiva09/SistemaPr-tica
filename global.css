@@ -6,6 +6,7 @@ body {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+    overflow-x: hidden;
 }
 
 @media (max-width: 3000px) {
@@ -93,7 +94,7 @@ main {
     display: flex;
     justify-content: center;
     gap: 6rem;
-    width: 100vw;
+    width: 100%;
     font-size: 2rem;
     background: linear-gradient(90deg, #76520e, #c5b790, #fffae5);
 }
@@ -186,22 +187,37 @@ footer .container-inferior {
 
 
 @media (max-width: 1025px) {
-  main {
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    padding: 4rem 2rem;
-    height: auto; /* deixa o conteúdo se ajustar */
-    width: 100vw;
-    background: linear-gradient(90deg, #76520e, #c5b790, #fffae5);
-  }
 
-  .menu-right img {
-    margin: 0;
-    width: 80%;
-  }
+    .logo {
+        font-size: 1.1rem;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        width: 21%;
+        padding-left: 2.12%;
+    }
 
+
+    main {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        height: auto; 
+        width: 100%;
+        background: linear-gradient(180deg, #76520e, #c5b790, #fffae5);
+    }
+
+    
+    .menu-right img {
+        margin: 0;
+        width: 80%;
+    }
 }
+
 
 .menu-toggle {
     display: none; /* esconde o checkbox */
@@ -223,7 +239,6 @@ footer .container-inferior {
     body {
         width: 100%;
         max-width: 100%;
-        overflow-x: hidden; /* remove rolagem lateral */
     }
 
     header {
@@ -236,6 +251,17 @@ footer .container-inferior {
         align-items: center; /* centraliza tudo horizontalmente */
     }
 
+    .logo {
+        font-size: 1.1rem;
+        flex-direction: column;
+        display: fle;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        width: 55%;
+    }
+
     .logo h3 {
         width: 100%;
         display: flex; /* Coloca os filhos (spans) lado a lado */
@@ -244,12 +270,7 @@ footer .container-inferior {
     }
 
     main {
-        width: 100%;      /* ocupa toda a largura da tela */
-        min-height: 100vh;
-        margin: 0;         /* remove qualquer espaçamento lateral */
-        margin-top: 10rem;
-        padding: 0;        /* zera padding se houver */
-        background: linear-gradient(180deg, #76520e, #c5b790, #fffae5);/* mantém o gradiente vertical */
+        background: linear-gradient(180deg, #76520e, #c5b790, #fffae5);
     }
 
     .menu-icon {
@@ -289,8 +310,8 @@ footer .container-inferior {
     /* Esconde a lista de links inicialmente */
     ul.nav-right {
         display: none;
-        text-align: center;
-        width: 100%; /* opcional, para o menu ocupar toda a largura */
+        justify-content: space-between;
+        width: 90%; /* opcional, para o menu ocupar toda a largura */
     }
 
 
