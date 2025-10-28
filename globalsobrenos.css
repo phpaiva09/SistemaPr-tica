@@ -137,6 +137,10 @@ main h3 {
 
 @media (max-width: 600px) {
 
+    body {
+        padding-bottom: 0;
+    }
+
     header {
         color: #76520e;
         position: fixed; 
@@ -168,8 +172,16 @@ main h3 {
 
     main {
         margin-top: 9rem;
-        padding-left: 5%;
-        padding-right: 5%;
+        width: 100%;
+        margin-left: 0;
+        margin-left: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    main h1 {
+        font-size: 2rem;
+        padding-top: 0;
     }
 
 
