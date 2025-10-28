@@ -143,8 +143,10 @@ section {
 }
 
 .logo-whatsapp-instagram {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
     gap: 3rem;
+    justify-content: center;
     padding-top: 2rem;
 }
 
@@ -232,13 +234,9 @@ footer .container-inferior {
 
 
 @media (max-width: 600px) {
-    body {
-        width: 100%;
-        max-width: 100%;
-    }
 
     header {
-        position: static;  /* header não fica fixo */
+        position: fixed; 
         margin-bottom: -9.5rem; /* reduz o espaço vertical */
         display: flex;
         width: 100%;
@@ -266,7 +264,7 @@ footer .container-inferior {
     }
 
     main {
-        background: linear-gradient(180deg, #76520e, #c5b790, #fffae5);
+        margin-top: 9rem;
     }
 
     .menu-icon {
@@ -280,28 +278,6 @@ footer .container-inferior {
         margin: 1rem auto 0; /* centraliza abaixo do logo */
     }
 
-    /* Bem vindo a pratica industria e comercio */
-    h2 {
-        font-size: 3rem;
-   
-    }
-
-    /* Subtitulo embaixo */
-    p {
-        font-size: 0.5rem;
-    }
-
-    #contato h2 {
-        font-size: 1.5rem;
-    }
-
-    #compre {
-        padding-top: 2rem;
-    }
-
-    #compre h2 {
-        font-size: 1.5rem;
-    }
 
     /* Esconde a lista de links inicialmente */
     ul.nav-right {

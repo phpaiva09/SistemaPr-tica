@@ -9,6 +9,7 @@ body {
     font-weight: weight;
     font-style: normal;
     overflow-x: hidden;
+    padding-bottom: 5%;
 }
 
 
@@ -29,6 +30,7 @@ body {
         z-index: 100;
         background-color: rgba(247, 244, 232, 0.7);
     }
+    
 
     /* Logo da esquerda no Navbar */
     .logo {
@@ -81,12 +83,18 @@ body {
 }
 /* Fim Cabeçalho */
 
+main {
+    width: 80%;
+}
+
+main h1 {
+    line-height: 2.5rem;
+}
 
 /* Início main */
 main {
     background-color: rgb(173, 173, 173);
-    width: 80%;
-    flex-direction: column;
+    display: flex;
     margin-top: 7.6rem;
     padding-top: 1rem;
     padding-left: 5rem;
@@ -101,11 +109,96 @@ main h1 {
     padding-top: 0.5rem;
 }
 
-main h3 {
+.menu-left h3 {
     font-size: 1.2rem;
     padding-top: 1.6rem;
 }
 
 .menu-toggle {
     display: none; /* esconde o checkbox */
+}
+
+
+@media (max-width: 1025px) {
+
+    .logo {
+        font-size: 1.1rem;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        width: 21%;
+        padding-left: 2.12%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        position: fixed; 
+        margin-bottom: -9.5rem; /* reduz o espaço vertical */
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-direction: column; /* empilha logo + hamburger + menu */
+        align-items: center; /* centraliza tudo horizontalmente */
+    }
+
+    .logo {
+        font-size: 1.1rem;
+        flex-direction: column;
+        display: fle;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        width: 55%;
+    }
+
+    .logo h3 {
+        width: 100%;
+        display: flex; /* Coloca os filhos (spans) lado a lado */
+        align-items: center; /* Centraliza verticalmente (opcional) */
+        justify-content: center; /* Centraliza horizontalmente (opcional) */
+    }
+
+    main {
+        margin-top: 9rem;
+    }
+
+    .menu-icon {
+        display: block; /* mostra o hamburger */
+        width: 12px;
+        height: 12px;
+        border-right: 3px solid #76520e;
+        border-bottom: 3px solid #76520e;
+        transform: rotate(-135deg); /* seta para cima */
+        transition: transform 0.3s ease;
+        margin: 1rem auto 0; /* centraliza abaixo do logo */
+    }
+
+
+    /* Esconde a lista de links inicialmente */
+    ul.nav-right {
+        display: none;
+        justify-content: space-between;
+        width: 90%; /* opcional, para o menu ocupar toda a largura */
+    }
+
+
+    /* Mostra o menu quando checkbox é marcado */
+    .menu-toggle:checked ~ ul.nav-right {
+        display: flex;
+        padding: 0%;
+        margin: 0%;
+        padding-right: 1.7rem;
+
+    }
+
+    /* Quando o menu estiver aberto (checkbox marcado), seta aponta para baixo */
+    .menu-toggle:checked + .menu-icon {
+        transform: rotate(45deg); /* seta para baixo */
+    }
 }
