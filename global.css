@@ -236,6 +236,7 @@ footer .container-inferior {
 @media (max-width: 600px) {
 
     header {
+        color: #76520e;
         position: fixed; 
         margin-bottom: -9.5rem; /* reduz o espaço vertical */
         display: flex;
